@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/ACrossPlatformCppLibrary/export.h
+
+D:/ACrossPlatformCppLibrary/main.cpp
+export.h
+D:/ACrossPlatformCppLibrary/export.h
+

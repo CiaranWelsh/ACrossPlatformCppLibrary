@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "ACrossPlatformCppLibrary.exe"
-  "ACrossPlatformCppLibrary.exe.manifest"
+  "ACrossPlatformCppLibrary.dll"
+  "ACrossPlatformCppLibrary.dll.manifest"
   "ACrossPlatformCppLibrary.lib"
   "ACrossPlatformCppLibrary.pdb"
   "CMakeFiles/ACrossPlatformCppLibrary.dir/main.cpp.obj"

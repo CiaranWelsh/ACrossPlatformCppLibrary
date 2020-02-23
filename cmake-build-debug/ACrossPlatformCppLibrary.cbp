@@ -18,10 +18,10 @@
 				</MakeCommands>
 			</Target>
 			<Target title="ACrossPlatformCppLibrary">
-				<Option output="D:/ACrossPlatformCppLibrary/cmake-build-debug/ACrossPlatformCppLibrary.exe" prefix_auto="0" extension_auto="0"/>
+				<Option output="D:/ACrossPlatformCppLibrary/cmake-build-debug/ACrossPlatformCppLibrary.dll" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="D:/ACrossPlatformCppLibrary/cmake-build-debug"/>
 				<Option object_output="./"/>
-				<Option type="1"/>
+				<Option type="3"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\ATLMFC\include"/>
@@ -41,10 +41,10 @@
 				</MakeCommands>
 			</Target>
 			<Target title="ACrossPlatformCppLibrary/fast">
-				<Option output="D:/ACrossPlatformCppLibrary/cmake-build-debug/ACrossPlatformCppLibrary.exe" prefix_auto="0" extension_auto="0"/>
+				<Option output="D:/ACrossPlatformCppLibrary/cmake-build-debug/ACrossPlatformCppLibrary.dll" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="D:/ACrossPlatformCppLibrary/cmake-build-debug"/>
 				<Option object_output="./"/>
-				<Option type="1"/>
+				<Option type="3"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\ATLMFC\include"/>
