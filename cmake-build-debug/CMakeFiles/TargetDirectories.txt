@@ -1,0 +1,3 @@
+D:/ACrossPlatformCppLibrary/cmake-build-debug/CMakeFiles/ACrossPlatformCppLibrary.dir
+D:/ACrossPlatformCppLibrary/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/ACrossPlatformCppLibrary/cmake-build-debug/CMakeFiles/rebuild_cache.dir
