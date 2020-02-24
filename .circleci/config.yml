@@ -7,22 +7,10 @@ jobs:
   build: # name of your job
     executor:
       name: win/default # executor type
-
     steps:
       - run:
           - command: git checkout https://github.com/CiaranWelsh/ACrossPlatformCppLibrary.git
+          - shell: powershell.exe
       - run:
-          command: cd ACrossPlatformLibrary && mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Debug ..
-          shell: bash.exe
-      - run:
-          command: cmake -G "Visual Studio 16 2019" ..
-          shell: bash.exe
-      - run:
-          command: devenv ACrossPlatformCppLibrary.sln /Build
-          shell: cmd.exe
-      - run:
-          command: cd test\Debug
-          shell: cmd.exe
-      - run:
-          command: text.exe
-          shell: cmd.exe
+          command: .\build_powershell.ps1
+          shell: powershell.exe
