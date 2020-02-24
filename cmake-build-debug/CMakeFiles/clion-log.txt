@@ -1,4 +1,13 @@
 C:\Users\Ciaran\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.6494.38\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - NMake Makefiles" D:\ACrossPlatformCppLibrary
+-- msvc
+-- CMAKE_BUILD_TYPE Debug
+-- debug
+-- CMAKE_BINARY_DIR D:/ACrossPlatformCppLibrary/cmake-build-debug
+-- LIB D:/ACrossPlatformCppLibrary/cmake-build-debug/src/ACrossPlatformCppLibrary.lib
+-- 
+
+        CMAKE_INSTALL_PREFIX    D:/ACrossPlatformCppLibrary/install
+
 -- Configuring done
 -- Generating done
 -- Build files have been written to: D:/ACrossPlatformCppLibrary/cmake-build-debug

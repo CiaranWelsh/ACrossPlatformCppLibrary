@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/ACrossPlatformCppLibrary/src/Adder.cpp
+Adder.h
+D:/ACrossPlatformCppLibrary/src/Adder.h
+
+D:/ACrossPlatformCppLibrary/src/Adder.h
+export.h
+D:/ACrossPlatformCppLibrary/src/export.h
+
+D:/ACrossPlatformCppLibrary/src/export.h
+

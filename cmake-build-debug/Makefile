@@ -57,6 +57,30 @@ CMAKE_BINARY_DIR = D:\ACrossPlatformCppLibrary\cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/local
+install\local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	C:\Users\Ciaran\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.6494.38\bin\cmake\win\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install\local
+
+# Special rule for the target install/local
+install\local\fast: preinstall\fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	C:\Users\Ciaran\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.6494.38\bin\cmake\win\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install\local\fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	C:\Users\Ciaran\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.6494.38\bin\cmake\win\bin\cmake.exe -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install\fast: preinstall\fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	C:\Users\Ciaran\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.6494.38\bin\cmake\win\bin\cmake.exe -P cmake_install.cmake
+.PHONY : install\fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -78,6 +102,16 @@ rebuild_cache:
 rebuild_cache\fast: rebuild_cache
 
 .PHONY : rebuild_cache\fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components\fast: list_install_components
+
+.PHONY : list_install_components\fast
 
 # The main all target
 all: cmake_check_build_system
@@ -112,6 +146,58 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main\fast:
+	$(MAKE) -f lib\googletest\googlemock\CMakeFiles\gmock_main.dir\build.make /nologo -$(MAKEFLAGS) lib\googletest\googlemock\CMakeFiles\gmock_main.dir\build
+.PHONY : gmock_main\fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock\fast:
+	$(MAKE) -f lib\googletest\googlemock\CMakeFiles\gmock.dir\build.make /nologo -$(MAKEFLAGS) lib\googletest\googlemock\CMakeFiles\gmock.dir\build
+.PHONY : gmock\fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest\fast:
+	$(MAKE) -f lib\googletest\googletest\CMakeFiles\gtest.dir\build.make /nologo -$(MAKEFLAGS) lib\googletest\googletest\CMakeFiles\gtest.dir\build
+.PHONY : gtest\fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main\fast:
+	$(MAKE) -f lib\googletest\googletest\CMakeFiles\gtest_main.dir\build.make /nologo -$(MAKEFLAGS) lib\googletest\googletest\CMakeFiles\gtest_main.dir\build
+.PHONY : gtest_main\fast
+
+#=============================================================================
 # Target rules for targets named ACrossPlatformCppLibrary
 
 # Build rule for target.
@@ -121,35 +207,21 @@ ACrossPlatformCppLibrary: cmake_check_build_system
 
 # fast build rule for target.
 ACrossPlatformCppLibrary\fast:
-	$(MAKE) -f CMakeFiles\ACrossPlatformCppLibrary.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\ACrossPlatformCppLibrary.dir\build
+	$(MAKE) -f src\CMakeFiles\ACrossPlatformCppLibrary.dir\build.make /nologo -$(MAKEFLAGS) src\CMakeFiles\ACrossPlatformCppLibrary.dir\build
 .PHONY : ACrossPlatformCppLibrary\fast
 
-main.obj: main.cpp.obj
+#=============================================================================
+# Target rules for targets named test
 
-.PHONY : main.obj
+# Build rule for target.
+test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) test
+.PHONY : test
 
-# target to build an object file
-main.cpp.obj:
-	$(MAKE) -f CMakeFiles\ACrossPlatformCppLibrary.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\ACrossPlatformCppLibrary.dir\main.cpp.obj
-.PHONY : main.cpp.obj
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles\ACrossPlatformCppLibrary.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\ACrossPlatformCppLibrary.dir\main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles\ACrossPlatformCppLibrary.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\ACrossPlatformCppLibrary.dir\main.cpp.s
-.PHONY : main.cpp.s
+# fast build rule for target.
+test\fast:
+	$(MAKE) -f test\CMakeFiles\test.dir\build.make /nologo -$(MAKEFLAGS) test\CMakeFiles\test.dir\build
+.PHONY : test\fast
 
 # Help Target
 help:
@@ -157,12 +229,17 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... ACrossPlatformCppLibrary
+	@echo ... install/local
+	@echo ... install
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... list_install_components
+	@echo ... gmock_main
+	@echo ... gmock
+	@echo ... gtest
+	@echo ... gtest_main
+	@echo ... ACrossPlatformCppLibrary
+	@echo ... test
 .PHONY : help
 
 
