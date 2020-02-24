@@ -1,6 +1,0 @@
-﻿  Building Custom Rule D:/ACrossPlatformCppLibrary/lib/googletest/googlemock/CMakeLists.txt
-  gtest-all.cc
-  gmock-all.cc
-  gmock_main.cc
-  Generating Code...
-  gmock_main.vcxproj -> D:\ACrossPlatformCppLibrary\build\lib\Debug\gmock_maind.lib
