@@ -12,6 +12,7 @@ $DEVENV = "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7
 
 # download cmake if we haven't already 
 if (![System.IO.File]::Exists($CMAKE_DOWNLOADED_FILE)){
+	$ProgressPreference = "SilentlyContinue"
 	Invoke-WebRequest $CMAKE_URL -OutFile $CMAKE_DOWNLOADED_FILE
 }
 
