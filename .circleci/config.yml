@@ -8,19 +8,26 @@ jobs:
     executor:
       name: win/default # executor type
 
-  dependencies:
-    cache_directories:
-      - ~/cmake-3.6.2-Linux-x86_64
-    override:
-      - >
-        if [ ! -d ~/cmake-3.6.2-Linux-x86_64 ]; then
-          echo "No cache - building CMake"
-          cd ~ && wget --quiet https://cmake.org/files/v3.6/cmake-3.6.2-Linux-x86_64.tar.gz && tar -xvf cmake-3.6.2-Linux-x86_64.tar.gz
-        else
-          echo "Cached CMake found"
-        fi
-
     steps:
+      - run:
+          - command: Set-Variable -Name CMAKE_URL -Value "https://github.com/Kitware/CMake/releases/download/v3.17.0-rc1/cmake-3.17.0-rc1-win64-x64.zip"
+          - shell: powershell.exe
+      - run:
+          - command: Set-Variable -Name CWD -Value $(Get-Location)
+          - shell: powershell.exe
+      - run:
+          - command: Set-Variable -Name CMAKE_DIR -Value "$cwd\cmake"
+          - shell: powershell.exe
+      - run:
+          - command: $WebClient = New-Object System.Net.WebClient ; WebClient.DownloadFile($CMAKE_URL, $CMAKE_DIR)
+          - shell: powershell.exe
+      - run:
+          - command: Expand-Archive .\cmake-3.17.0-rc1-win64-x64.zip -DestinationPath cmake
+          - shell: powershell.exe
+      - run:
+          - command: $Env:Path += "$CMAKE_DIR\cmake-3.17.0-rc1-win64-x64\bin"
+      - run:
+          - command:
       - checkout
       - run:
           command: mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Debug ..

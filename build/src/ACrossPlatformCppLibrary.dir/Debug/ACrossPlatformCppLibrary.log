@@ -1,0 +1,6 @@
+﻿  Building Custom Rule D:/ACrossPlatformCppLibrary/src/CMakeLists.txt
+  Adder.cpp
+  C Preprocessor got here!
+  Auto build dll exports
+     Creating library D:/ACrossPlatformCppLibrary/build/src/Debug/ACrossPlatformCppLibrary.lib and object D:/ACrossPlatformCppLibrary/build/src/Debug/ACrossPlatformCppLibrary.exp
+  ACrossPlatformCppLibrary.vcxproj -> D:\ACrossPlatformCppLibrary\build\src\Debug\ACrossPlatformCppLibrary.dll

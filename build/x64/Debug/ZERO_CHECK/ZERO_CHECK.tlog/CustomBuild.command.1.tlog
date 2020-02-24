@@ -1,0 +1,10 @@
+^D:\ACROSSPLATFORMCPPLIBRARY\BUILD\CMAKEFILES\DE773FE1EA94F5839ED342551B12D0BE\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/ACrossPlatformCppLibrary -BD:/ACrossPlatformCppLibrary/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/ACrossPlatformCppLibrary/build/ACrossPlatformCppLibrary.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
