@@ -10,10 +10,9 @@ jobs:
 
     steps:
       - run:
-          - command:
-      - checkout
+          - command: git checkout https://github.com/CiaranWelsh/ACrossPlatformCppLibrary.git
       - run:
-          command: mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Debug ..
+          command: cd ACrossPlatformLibrary && mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Debug ..
           shell: bash.exe
       - run:
           command: cmake -G "Visual Studio 16 2019" ..
