@@ -16,9 +16,11 @@ jobs:
             ls
             & .\build_powershell.ps1
           shell: powershell.exe
-#      - run:
-#          command: cd ACrossPlatformCppLibrary
-#          shell: powershell.exe
+      - run:
+          command: |
+            $pwd
+            ls
+          shell: powershell.exe
 #      - run:
 #          command: ls; build_powershell.ps1
 #          shell: powershell.exe
