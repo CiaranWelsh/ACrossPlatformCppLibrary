@@ -9,6 +9,9 @@ jobs:
       name: win/default # executor type
     steps:
       - run:
+          command: cmake --help
+          shell: powershell.exe
+      - run:
           name: "Build windows"
           command: |
             git clone https://github.com/CiaranWelsh/ACrossPlatformCppLibrary.git

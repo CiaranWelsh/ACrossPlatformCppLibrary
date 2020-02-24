@@ -40,7 +40,7 @@ if (!(Test-Path $DEVENV)){
 
 # need a reasonably long wait time for devenv to finish up or we wont 
 # be able to find the test binary
-Start-Sleep -s 10
+Start-Sleep -s 30
 
 echo "In build: $pwd"
 ls
