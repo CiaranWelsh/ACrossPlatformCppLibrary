@@ -5,22 +5,23 @@ orbs:
 
 jobs:
   build-win: # name of your job
-    executor: win/default # executor type
+    executor:
+      name: win/default # executor type
 
     steps:
-      - checkout
+      checkout
       - run:
-          - command: mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Debug ..
-          - shell: bash.exe
+          command: mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Debug ..
+          shell: bash.exe
       - run:
-          - command: cmake -G "Visual Studio 16 2019" ..
-          - shell: bash.exe
+          command: cmake -G "Visual Studio 16 2019" ..
+          shell: bash.exe
       - run:
-          - command: devenv ACrossPlatformCppLibrary.sln /Build
-          - shell: cmd.exe
+          command: devenv ACrossPlatformCppLibrary.sln /Build
+          shell: cmd.exe
       - run:
-          - command: cd test\Debug
-          - shell: cmd.exe
+          command: cd test\Debug
+          shell: cmd.exe
       - run:
-          - command: text.exe
-          - shell: cmd.exe
+          command: text.exe
+          shell: cmd.exe
