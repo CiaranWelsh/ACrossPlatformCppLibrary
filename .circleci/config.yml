@@ -17,9 +17,7 @@ jobs:
             & .\build_powershell.ps1
           shell: powershell.exe
       - run:
-          command: |
-            $pwd
-            ls
+          command: .\ACrossPlatformCppLibrary\build\test\Debug\test.exe
           shell: powershell.exe
 #      - run:
 #          command: ls; build_powershell.ps1

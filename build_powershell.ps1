@@ -50,7 +50,7 @@ ls
 cd Debug 
 echo "in debug: $pwd"
 ls
-.\test.exe
+#.\test.exe
 
 cd $CWD
 
