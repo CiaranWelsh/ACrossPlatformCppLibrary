@@ -9,7 +9,7 @@ jobs:
       name: win/default # executor type
     steps:
       - run:
-          command: git checkout https://github.com/CiaranWelsh/ACrossPlatformCppLibrary.git
+          command: git clone https://github.com/CiaranWelsh/ACrossPlatformCppLibrary.git
           shell: powershell.exe
       - run:
           command: .\build_powershell.ps1
