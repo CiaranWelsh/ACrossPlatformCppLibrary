@@ -2,8 +2,9 @@ C:\Users\Ciaran\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.6494.38\bin\
 -- msvc
 -- CMAKE_BUILD_TYPE Debug
 -- debug
+-- CMAKE_BUILD_TYPE Debug
 -- CMAKE_BINARY_DIR D:/ACrossPlatformCppLibrary/cmake-build-debug
--- LIB D:/ACrossPlatformCppLibrary/cmake-build-debug/src/ACrossPlatformCppLibrary.lib
+-- LIB 
 -- 
 
         CMAKE_INSTALL_PREFIX    D:/ACrossPlatformCppLibrary/install

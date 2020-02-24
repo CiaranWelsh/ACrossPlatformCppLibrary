@@ -1,9 +1,9 @@
 Determining if the include file pthread.h exists failed with the following output:
 Change Dir: D:/ACrossPlatformCppLibrary/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_d7fb7\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_d7fb7.dir\build.make /nologo -L                  CMakeFiles\cmTC_d7fb7.dir\build
-Building C object CMakeFiles/cmTC_d7fb7.dir/CheckIncludeFile.c.obj
-	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\cl.exe @C:\Users\Ciaran\AppData\Local\Temp\nmA8AE.tmp
+Run Build Command(s):nmake /nologo cmTC_0f589\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_0f589.dir\build.make /nologo -L                  CMakeFiles\cmTC_0f589.dir\build
+Building C object CMakeFiles/cmTC_0f589.dir/CheckIncludeFile.c.obj
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\cl.exe @C:\Users\Ciaran\AppData\Local\Temp\nm98E6.tmp
 CheckIncludeFile.c
 D:\ACrossPlatformCppLibrary\cmake-build-debug\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory
 NMAKE : fatal error U1077: 'C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1424~1.283\bin\Hostx86\x86\cl.exe' : return code '0x2'
