@@ -1,5 +1,5 @@
-libdir=D:/ACrossPlatformCppLibrary/install/lib
-includedir=D:/ACrossPlatformCppLibrary/install/include
+libdir=C:/Program Files (x86)/ACrossPlatformCppLibrary/lib
+includedir=C:/Program Files (x86)/ACrossPlatformCppLibrary/include
 
 Name: gmock_main
 Description: GoogleMock (with main() function)

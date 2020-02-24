@@ -309,8 +309,8 @@ test\preinstall:
 # Target rules for target test/CMakeFiles/test.dir
 
 # All Build rule for target.
-test\CMakeFiles\test.dir\all: lib\googletest\googletest\CMakeFiles\gtest_main.dir\all
 test\CMakeFiles\test.dir\all: lib\googletest\googletest\CMakeFiles\gtest.dir\all
+test\CMakeFiles\test.dir\all: lib\googletest\googletest\CMakeFiles\gtest_main.dir\all
 	$(MAKE) -f test\CMakeFiles\test.dir\build.make /nologo -$(MAKEFLAGS) test\CMakeFiles\test.dir\depend
 	$(MAKE) -f test\CMakeFiles\test.dir\build.make /nologo -$(MAKEFLAGS) test\CMakeFiles\test.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\ACrossPlatformCppLibrary\cmake-build-debug\CMakeFiles --progress-num=14,15 "Built target test"

@@ -3,11 +3,12 @@ C:\Users\Ciaran\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.6494.38\bin\
 -- CMAKE_BUILD_TYPE Debug
 -- debug
 -- CMAKE_BUILD_TYPE Debug
+-- copy D:/ACrossPlatformCppLibrary/cmake-build-debug/src/Debug/ACrossPlatformCppLibrary.dll
 -- CMAKE_BINARY_DIR D:/ACrossPlatformCppLibrary/cmake-build-debug
 -- LIB 
 -- 
 
-        CMAKE_INSTALL_PREFIX    D:/ACrossPlatformCppLibrary/install
+        CMAKE_INSTALL_PREFIX    C:/Program Files (x86)/ACrossPlatformCppLibrary
 
 -- Configuring done
 -- Generating done

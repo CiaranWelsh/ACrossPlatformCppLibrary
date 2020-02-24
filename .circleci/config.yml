@@ -8,6 +8,7 @@ jobs:
     executor: win/default # executor type
 
     steps:
+      - checkout
       - run:
           - command: mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Debug ..
           - shell: bash.exe
@@ -15,5 +16,11 @@ jobs:
           - command: cmake -G "Visual Studio 16 2019" ..
           - shell: bash.exe
       - run:
-          - devenv ACrossPlatformCppLibrary.sln /Build
+          - command: devenv ACrossPlatformCppLibrary.sln /Build
+          - shell: cmd.exe
+      - run:
+          - command: cd test\Debug
+          - shell: cmd.exe
+      - run:
+          - command: text.exe
           - shell: cmd.exe

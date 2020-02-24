@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "D:/ACrossPlatformCppLibrary/install")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/ACrossPlatformCppLibrary")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,25 +34,25 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "D:/ACrossPlatformCppLibrary/install/ACrossPlatformCppLibrary.lib")
+   "C:/Program Files (x86)/ACrossPlatformCppLibrary/ACrossPlatformCppLibrary.lib")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "D:/ACrossPlatformCppLibrary/install" TYPE STATIC_LIBRARY OPTIONAL FILES "D:/ACrossPlatformCppLibrary/cmake-build-debug/src/ACrossPlatformCppLibrary.lib")
+file(INSTALL DESTINATION "C:/Program Files (x86)/ACrossPlatformCppLibrary" TYPE STATIC_LIBRARY OPTIONAL FILES "D:/ACrossPlatformCppLibrary/cmake-build-debug/src/ACrossPlatformCppLibrary.lib")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "D:/ACrossPlatformCppLibrary/install/ACrossPlatformCppLibrary.dll")
+   "C:/Program Files (x86)/ACrossPlatformCppLibrary/ACrossPlatformCppLibrary.dll")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "D:/ACrossPlatformCppLibrary/install" TYPE SHARED_LIBRARY FILES "D:/ACrossPlatformCppLibrary/cmake-build-debug/src/ACrossPlatformCppLibrary.dll")
+file(INSTALL DESTINATION "C:/Program Files (x86)/ACrossPlatformCppLibrary" TYPE SHARED_LIBRARY FILES "D:/ACrossPlatformCppLibrary/cmake-build-debug/src/ACrossPlatformCppLibrary.dll")
 endif()
 

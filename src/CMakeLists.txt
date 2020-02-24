@@ -51,9 +51,10 @@ endif ()
 install(TARGETS ACrossPlatformCppLibrary DESTINATION ${CMAKE_INSTALL_PREFIX})
 
 message(STATUS "CMAKE_BUILD_TYPE ${CMAKE_BUILD_TYPE}")
+message(STATUS "copy ${PROJECT_BINARY_DIR}/src/${CMAKE_BUILD_TYPE}/ACrossPlatformCppLibrary.${SHARED_LIB_EXT}")
 # copy the shared lib to location where it will be used for testing
 # https://stackoverflow.com/questions/10671916/how-to-copy-dll-files-into-the-same-folder-as-the-executable-using-cmake
 add_custom_command(TARGET ACrossPlatformCppLibrary POST_BUILD        # Adds a post-build event to MyTest
     COMMAND ${CMAKE_COMMAND} -E copy_if_different  # which executes "cmake - E copy_if_different..."
         "${PROJECT_BINARY_DIR}/src/${CMAKE_BUILD_TYPE}/ACrossPlatformCppLibrary.${SHARED_LIB_EXT}"      # <--this is in-file
-        "${PROJECT_BINARY_DIR}/test/ACrossPlatformCppLibrary.${SHARED_LIB_EXT}")                 # <--this is out-file path
+        "${PROJECT_BINARY_DIR}/test/${CMAKE_BUILD_TYPE}/ACrossPlatformCppLibrary.${SHARED_LIB_EXT}")                 # <--this is out-file path
