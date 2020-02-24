@@ -17,18 +17,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2b8829a-42a0-45a6-ae46-825387e0deb7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/ACrossPlatformCppLibrary.dll" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/ACrossPlatformCppLibrary.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/ACrossPlatformCppLibrary.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/ACrossPlatformCppLibrary.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/ACrossPlatformCppLibrary.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/ACrossPlatformCppLibrary.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/ACrossPlatformCppLibrary.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/ACrossPlatformCppLibrary.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/test.dir/test_add.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/test.dir/test_add.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/test.dir/vc140.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/test.dir/vc140.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/test.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/test.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/test.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/test.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/test.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/test.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_add.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_add.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +133,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582484677456</updated>
-      <workItem from="1582484680596" duration="25189000" />
+      <workItem from="1582484680596" duration="25814000" />
     </task>
     <servers />
   </component>
@@ -164,22 +153,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1582491599598" />
-    <state width="1491" height="210" key="GridCell.Tab.0.bottom" timestamp="1582520786176">
+    <state width="1491" height="210" key="GridCell.Tab.0.bottom" timestamp="1582522258625">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582520786176" />
-    <state width="1491" height="210" key="GridCell.Tab.0.center" timestamp="1582520786176">
+    <state width="1491" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582522258625" />
+    <state width="1491" height="210" key="GridCell.Tab.0.center" timestamp="1582522258625">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1582520786176" />
-    <state width="1491" height="210" key="GridCell.Tab.0.left" timestamp="1582520786176">
+    <state width="1491" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1582522258625" />
+    <state width="1491" height="210" key="GridCell.Tab.0.left" timestamp="1582522258625">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1582520786176" />
-    <state width="1491" height="210" key="GridCell.Tab.0.right" timestamp="1582520786176">
+    <state width="1491" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1582522258625" />
+    <state width="1491" height="210" key="GridCell.Tab.0.right" timestamp="1582522258625">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1582520786176" />
+    <state width="1491" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1582522258625" />
     <state x="278" y="55" key="SettingsEditor" timestamp="1582516215166">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
