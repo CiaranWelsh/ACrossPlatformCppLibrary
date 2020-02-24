@@ -17,7 +17,7 @@ TEST(test, test_add_windows) {
     int x = 5;
     int y = 6;
     int answer = add(x, y);
-    ASSERT_EQ(answer, 11);
+    ASSERT_EQ(answer, 12);
     BOOL fFreeResult = FreeLibrary(hinstLib);
 //#else
 //    ASSERT_TRUE(true);
