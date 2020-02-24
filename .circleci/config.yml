@@ -9,7 +9,7 @@ jobs:
       name: win/default # executor type
 
     steps:
-      checkout
+      - checkout
       - run:
           command: mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Debug ..
           shell: bash.exe
