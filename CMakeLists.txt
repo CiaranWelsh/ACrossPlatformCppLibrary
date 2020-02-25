@@ -35,17 +35,9 @@ endif ()
 
 MESSAGE(STATUS "SHARED_LIB_EXT ${SHARED_LIB_EXT}")
 
-
-set(TEST_LIB "D:/ACrossPlatformCppLibrary/cmake-build-debug/test")
 add_subdirectory(lib/googletest)
 add_subdirectory(src)
-
-set(LIB $<TARGET_FILE:ACrossPlatformCppLibrary>)
-
 add_subdirectory(test)
-
-#get_property(ACrossPlatformCppLibrary_location TARGET ACrossPlatformCppLibrary PROPERTY LOCATION)
-
 
 
 message(STATUS "
@@ -54,9 +46,9 @@ PROJECT_VERSION                     ${PROJECT_VERSION}
 CMAKE_BUILD_TYPE                    ${CMAKE_BUILD_TYPE}
 CMAKE_CXX_COMPILER_ID               ${CMAKE_CXX_COMPILER_ID}
 CMAKE_INSTALL_PREFIX                ${CMAKE_INSTALL_PREFIX}
-CMAKE_SYSTEM_NAME                   ${CMAKE_SYSTEM_NAME}
 SHARED_LIB_EXT                      ${SHARED_LIB_EXT}
-LIB                                 ${LIB}
+CMAKE_SHARED_LIBRARY_SUFFIX         ${CMAKE_SHARED_LIBRARY_SUFFIX}
+CMAKE_SHARED_LIBRARY_PREFIX         ${CMAKE_SHARED_LIBRARY_PREFIX}
 ")
 
 

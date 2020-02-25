@@ -50,6 +50,6 @@ add_custom_command(
         POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy_if_different
         "$<TARGET_FILE:ACrossPlatformCppLibrary>"
-        "$<TARGET_FILE_DIR:test>/$<TARGET_FILE_NAME:ACrossPlatformCppLibrary>"
+        "$<TARGET_FILE_DIR:test>/ACrossPlatformCppLibrary${CMAKE_SHARED_LIBRARY_SUFFIX}"
 )
 
