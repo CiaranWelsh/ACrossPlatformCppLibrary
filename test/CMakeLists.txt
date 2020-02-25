@@ -6,22 +6,7 @@ target_include_directories(
         ${CMAKE_SOURCE_DIR}
 )
 MESSAGE(STATUS "CMAKE_BINARY_DIR ${CMAKE_BINARY_DIR}")
-#target_link_directories(test PUBLIC
-#        ${CMAKE_BINARY_DIR}
-#        ${CMAKE_BINARY_DIR}/src
-#        )
-#find_library(LIB
-#        ACrossPlatformCppLibrary
-#        PATHS
-#            ${CMAKE_BINARY_DIR}
-#            ${CMAKE_BINARY_DIR}/src
-#        )
 
-#add_library(ACrossPlatformCppLibrary SHARED IMPORTED)
-#set_property(TARGET ACrossPlatformCppLibrary
-#        PROPERTY IMPORTED_LOCATION
-#        ${CMAKE_BINARY_DIR}/src
-#        )
 
 MESSAGE(STATUS "LIB ${LIB}")
 

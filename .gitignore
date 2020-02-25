@@ -3,3 +3,4 @@ build/
 cmake-build-debug/
 cmake.zip
 cmake/
+cmake-build-*

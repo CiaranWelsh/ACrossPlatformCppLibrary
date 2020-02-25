@@ -17,18 +17,14 @@ set_target_properties(ACrossPlatformCppLibrary
 
 
 # now we need to set some compiler specific flags
+# for linux but not cygwin
 if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
-    message(STATUS "gnu")
     # for g++
-    target_compile_options(ACrossPlatformCppLibrary PRIVATE -Wall -Wextra)
+    target_compile_options(ACrossPlatformCppLibrary PRIVATE -Wall -Wextra -shared)
     # set shared library suffix
-    set(SHARED_LIB_EXT "so")
 elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
-    message(STATUS "msvc")
     message(STATUS "CMAKE_BUILD_TYPE ${CMAKE_BUILD_TYPE}")
-
     add_compile_options(/Wall)
-
     if ("${CMAKE_BUILD_TYPE}" STREQUAL "Release")
         message(STATUS "release")
         add_compile_options(/MD)
@@ -36,25 +32,24 @@ elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
         message(STATUS "debug")
         add_compile_options(/MDd)
     endif ()
-
-
-#    target_compile_options(ACrossPlatformCppLibrary PUBLIC /EHsc /MDd /Wall /c)
     # this is where we set the DLLEXPORT variable to enable exporting symbols
-    target_compile_definitions(ACrossPlatformCppLibrary PUBLIC -DLIBRARY_EXPORTS=1)
-    set(SHARED_LIB_EXT "dll")
 else ()
     message(FATAL "nope")
-    set(SHARED_LIB_EXT "dylib")
 endif ()
-
+target_compile_definitions(ACrossPlatformCppLibrary PUBLIC -DLIBRARY_EXPORTS=1)
 
 install(TARGETS ACrossPlatformCppLibrary DESTINATION ${CMAKE_INSTALL_PREFIX})
 
-message(STATUS "CMAKE_BUILD_TYPE ${CMAKE_BUILD_TYPE}")
-message(STATUS "copy ${PROJECT_BINARY_DIR}/src/${CMAKE_BUILD_TYPE}/ACrossPlatformCppLibrary.${SHARED_LIB_EXT}")
+
 # copy the shared lib to location where it will be used for testing
-# https://stackoverflow.com/questions/10671916/how-to-copy-dll-files-into-the-same-folder-as-the-executable-using-cmake
-add_custom_command(TARGET ACrossPlatformCppLibrary POST_BUILD        # Adds a post-build event to MyTest
-    COMMAND ${CMAKE_COMMAND} -E copy_if_different  # which executes "cmake - E copy_if_different..."
-        "${PROJECT_BINARY_DIR}/src/${CMAKE_BUILD_TYPE}/ACrossPlatformCppLibrary.${SHARED_LIB_EXT}"      # <--this is in-file
-        "${PROJECT_BINARY_DIR}/test/${CMAKE_BUILD_TYPE}/ACrossPlatformCppLibrary.${SHARED_LIB_EXT}")                 # <--this is out-file path
+#   https://stackoverflow.com/questions/10671916/how-to-copy-dll-files-into-the-same-folder-as-the-executable-using-cmake
+# uses generator expressions in combination with add_custom_command
+#   https://stackoverflow.com/questions/35695152/cmake-generator-expression-is-not-being-evaluated
+add_custom_command(
+        TARGET ACrossPlatformCppLibrary
+        POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        "$<TARGET_FILE:ACrossPlatformCppLibrary>"
+        "$<TARGET_FILE_DIR:test>/$<TARGET_FILE_NAME:ACrossPlatformCppLibrary>"
+)
+
