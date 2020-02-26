@@ -20,7 +20,14 @@ set_target_properties(ACrossPlatformCppLibrary
 # for linux but not cygwin
 if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
     # for g++
-    target_compile_options(ACrossPlatformCppLibrary PRIVATE -Wall -Wextra -shared)
+    message(STATUS "GNUED")
+    target_compile_options(ACrossPlatformCppLibrary PRIVATE -Wall -Wextra -shared )
+
+    # fix linker error: undefined reference to dlopen
+    # https://gist.github.com/kwk/3595733
+    target_link_directories(ACrossPlatformCppLibrary PRIVATE dl)
+#    target_link_libraries(ACrossPlatformCppLibrary PRIVATE /lib/x86_64-linux-gnu/dl)
+#    target_link_libraries(ACrossPlatformCppLibrary PRIVATE /lib/x86_64-linux-gnu/libdl.so.2)
     # set shared library suffix
 elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
     message(STATUS "CMAKE_BUILD_TYPE ${CMAKE_BUILD_TYPE}")

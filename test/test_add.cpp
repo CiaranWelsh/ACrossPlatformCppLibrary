@@ -6,9 +6,11 @@
 
 #if defined(_WIN32) || defined (_WIN64) || defined(__CYGWIN__)
     #include <windows.h>
-#elif defined(__GNUC__)
-    #include "dlfcn.h"
+#elif defined(__linux__)
+
+#include <dlfcn.h>
 #endif
+
 
 TEST(test, test_add_windows) {
     typedef int (*addPtr)(int, int);
@@ -18,7 +20,7 @@ TEST(test, test_add_windows) {
     ASSERT_NE(hinstLib, nullptr);
     auto add = (addPtr) GetProcAddress(hinstLib, "add");
     ASSERT_NE(add, nullptr);
-#elif defined(__linux__) ||
+#elif defined(__linux__)
     std::cout << "GNU" << std::endl;
     void* handle;
     handle = dlopen("ACrossPlatformCppLibrary.dll.a", RTLD_LAZY);
